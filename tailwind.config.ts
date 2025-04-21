@@ -2,9 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -16,6 +14,11 @@ const config: Config = {
       },
       textShadow: {
         text: '0px 0px 10px rgba(255,255,255,0.3)',
+      },
+      fontSize: {
+        'hero': '10rem',
+        'hero-md': '8rem',
+        'hero-lg': '12rem',
       },
     },
   },

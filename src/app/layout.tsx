@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../styles/global.css";
-import "../styles/fonts.css";
-import Script from "next/script";
+// styles
+import '@rainbow-me/rainbowkit/styles.css';
+import "@/styles/core/flag-icon.min.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/global.css";
+import "@/styles/fonts.css";
+import "@/styles/broccoli.css";
+
+import Script from "next/script";
+import { AppProviders } from "@/providers/AppProviders";
 
 export const metadata: Metadata = {
   title: "Caramelo",
@@ -19,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-
+        <link rel="stylesheet" href="/css/global.css" />
       </head>
-      <body className={inter.className}>
-        {children}
+      <body >
+        <AppProviders>{children}</AppProviders>
         <Script src="/js/main-app.js" strategy="afterInteractive" />
         <Script src="/js/page.js" strategy="afterInteractive" />
         <Script src="/js/javascript_01.js" strategy="afterInteractive" />
