@@ -12,6 +12,8 @@ export function Story() {
                 <p className="text-lg md:text-3xl text-center text-shadow-text">CARAMELO is a Belgian Malinois recently adopted by the founder of Binance.</p>
                 <p className="text-lg md:text-3xl text-center text-shadow-text">Paying homage to CZ's dog CARAMELO, this token was the first to be deployed on BNB Chain through the platform four.meme.</p>
                 <p className="text-lg md:text-3xl text-center text-shadow-text">The CARAMELO token is managed and owned by its community, with love.</p>
+                <p className="text-gray-400">Caramelo&apos;s journey began with a simple idea</p>
+                <p className="text-gray-400">Caramelo&apos;s vision is to create</p>
               </aside>
               <aside className="h-[500px] md:h-[900px] w-full relative">
                 <div className="size-full absolute top-0 -right-8 2xl:-right-20">
