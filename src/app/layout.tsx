@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/global.css";
 import "../styles/fonts.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+
+      </head>
+      <body className={inter.className}>
+        {children}
+        <Script src="/js/main-app.js" strategy="afterInteractive" />
+        <Script src="/js/page.js" strategy="afterInteractive" />
+        <Script src="/js/javascript_01.js" strategy="afterInteractive" />
+        <Script src="/js/javascript_02.js" strategy="afterInteractive" />
+      </body>
     </html>
   );
 }
