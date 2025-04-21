@@ -8,6 +8,7 @@ import { rainbowWallet,
 import { rainbowWeb3AuthConnector } from "./RaimbowWeb3AuthConnector";
 import { http } from "wagmi";
 import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { mainnet } from 'wagmi/chains'
 
 function walletconnect() {
   return walletConnectWallet({
@@ -55,15 +56,15 @@ function walletconnect() {
   });
 }
 
-
-
 export const config = getDefaultConfig({
-  appName: 'Caramelo Coin',
-  projectId: '04309ed1007e77d1f119b85205bb779d',
-  chains: [bsc],
+  appName: 'Caramelo',
+  projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '',
+  chains: [mainnet, bsc],
   transports: {
+    [mainnet.id]: http(),
     [bsc.id]: http(),
   },
+  ssr: true,
   wallets: [{
     groupName: 'Recommended',
     wallets: [
