@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        atopic: ['atopic', 'sans-serif'],
+        atopic: ['Atopic', 'system-ui', 'sans-serif'],
       },
       colors: {
         brand: '#000', 
@@ -20,3 +21,4 @@ module.exports = {
   },
   plugins: [],
 }
+export default config

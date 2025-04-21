@@ -1,0 +1,50 @@
+.rfm-marquee-container {
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: var(--width);
+  transform: var(--transform);
+}
+
+.rfm-marquee {
+  flex: 0 0 auto;
+  min-width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+  animation-play-state: var(--play);
+  animation-delay: var(--delay);
+  animation-direction: var(--direction);
+}
+
+.rfm-marquee-container:hover .rfm-marquee {
+  animation-play-state: var(--pause-on-hover);
+}
+
+.rfm-marquee-container:active .rfm-marquee {
+  animation-play-state: var(--pause-on-click);
+}
+
+.rfm-initial-child-container {
+  display: flex;
+  min-width: 100%;
+}
+
+.rfm-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: var(--transform);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} 
