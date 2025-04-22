@@ -8,7 +8,7 @@ export function Header() {
     <section className="w-full bg-white h-[66px] md:h-[113px] p-8">
       <div className="w-full h-full max-w-[1560px] m-auto md:px-8 px-4">
         <nav className="size-full flex items-center justify-between">
-          <Link href="/" className="size-[35px] md:size-[83px] relative">
+          <Link href="/" className="size-[95px] md:size-[100px] relative">
             <Image 
               src="/dog.png" 
               alt="Logo" 
@@ -19,7 +19,7 @@ export function Header() {
           <div className="flex items-center gap-4 sm:gap-16">
             <a 
               target="_blank" 
-              href="https://t.me/CARAMELOportal_bsc" 
+              href="https://t.me/caramelocoincripto" 
               className="md:h-[50px] size-[24px] md:w-[55px] relative"
             >
               <Image 
@@ -31,7 +31,7 @@ export function Header() {
             </a>
             <a 
               target="_blank" 
-              href="https://x.com/CARAMELOCTO_BNB" 
+              href="https://x.com/caramelocoinofc" 
               className="md:size-[50px] size-[20px] relative"
             >
               <Image 
@@ -41,19 +41,7 @@ export function Header() {
                 className="size-full object-contain"
               />
             </a>
-            <a 
-              target="_blank" 
-              href="https://dexscreener.com/bsc/0xa5067360b13fc7a2685dc82dcd1bf2b4b8d7868b" 
-              className="md:size-[70px] size-[30px] relative"
-            >
-              <Image 
-                src="/dex-black.png" 
-                alt="DexScreener" 
-                fill 
-                className="size-full object-contain"
-              />
-            </a>
-
+        
             <ConnectButton />
           </div>
         </nav>
